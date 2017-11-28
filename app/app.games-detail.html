@@ -1,0 +1,21 @@
+<div id="content" class="row">
+  <div *ngIf="product">
+    <div class="product-item text-center">
+      <div class="image ">
+          <img width="500" height="470" [src]="product.imageUrl">
+      </div>
+      <hr>
+      <div class="title uppercase bold">
+        <p>{{product.name}}</a>
+      </div>
+      <div class="price">
+        <span>R${{product.price}}</span>
+      </div>
+      <div class="buttons-holder">
+        <div class="add-cart-holder">
+          <a  class="btn btn-primary" >Adicionar ao Carrinho</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

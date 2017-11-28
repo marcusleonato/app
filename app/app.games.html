@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+<div class="row">
+  <div class="col-md-3 pull-right">
+    <h4>Ordernar por: </h4>
+    <select [(ngModel)]="orderItem" class="form-control">
+      <option value="-sellCount">Popularidade</option>
+      <option value="-viewCount">Mais Vistos</option>
+    </select>
+  </div>
+  <div id="content" class="row">
+    <div *ngFor="#product of products | orderBy : orderItem"
+         [class.selected]="product === selectedProduct"
+         (click)="onSelect(product)"
+         class="col-lg-offset-0 col-lg-3 col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-2 product-holder">
+      <div class="product-item text-center">
+        <div class="image ">
+          <a style="display:inline-block;" href="javascript:void(0)">
+            <img width="230" height="230" [src]="product.imageUrl">
+          </a>
+        </div>
+        <hr>
+        <div class="title uppercase bold">
+          <a href="javascript:void(0)" (click)="onClick(product.id)" [routerLink]="['ProductDetail', { id: product.id }]">{{product.name}}</a>
+        </div>
+        <div class="price">
+          <span>R${{product.price}}</span>
+        </div>
+        <div class="buttons-holder">
+          <div class="add-cart-holder">
+            <a  class="btn btn-primary" >Adicionar ao Carrinho</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,39 @@
+
+#content {
+  margin-top: 50px;
+}
+
+.pull-right{
+  float: right;
+}
+
+.title{
+  min-height: 44px;
+  max-height: 44px;
+  display: inline-block;
+}
+
+.add-cart-holder a{
+  color:#FFFFFF;
+}
+
+.product-item{
+  margin-bottom: 20px;
+}
+
+.price{
+  margin-bottom: 15px;
+}
+
+.product-holder{
+  margin-bottom: 20px;
+}
+
+.product-grid .product-item hr{
+  border: 1px solid #CECECE;
+  width:40px;
+  margin:24px auto 12px auto;
+}
+.product-grid .product-item .price span{
+  margin-left:3px;
+}
